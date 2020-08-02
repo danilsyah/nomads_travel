@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    NOMADS ADMIN
+@endsection
+
 @section('content')
 <!-- Begin Page Content -->
 <div class="container-fluid">
