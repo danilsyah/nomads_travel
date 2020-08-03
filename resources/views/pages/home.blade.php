@@ -67,7 +67,7 @@
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">DERATAN, BALI</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -79,7 +79,7 @@
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">BROMO, MALANG</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">NUSA PENIDA</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -103,7 +103,7 @@
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">DUBAI</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                     </p>
                 </div>
                 <div class="col-md-8 text-center">
-                    <img src="frontend/images/partner.png" class="img-patner" />
+                    <img src="{{ url('frontend/images/partner.png') }}" class="img-patner" />
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/avatar-1.png" alt="" class="mb-4 rounded-circle" />
+                            <img src="{{ url('frontend/images/avatar-1.png') }}" alt="" class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Angga Risky</h3>
                             <p class="testimonials">
                                 “ It was glorious and I could not stop to say wohooo for
@@ -163,7 +163,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/avatar-2.png" alt="" class="mb-4 rounded-circle" />
+                            <img src="{{ url('frontend/images/avatar-2.png') }}" alt="" class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Shayna</h3>
                             <p class="testimonials">
                                 “ The trip was amazing and I saw something beautiful in that
@@ -177,7 +177,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content mb-auto">
-                            <img src="frontend/images/avatar-3.png" alt="" class="mb-4 rounded-circle" />
+                            <img src="{{ url('frontend/images/avatar-3.png') }}" alt="" class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Shabrina</h3>
                             <p class="testimonials">
                                 “ I loved it when the waves was shaking harder — I was
