@@ -20,6 +20,14 @@ body {
   border-radius: 0;
 }
 
+.btn-navbar-right-signup{
+  margin-top: -10px !important;
+  margin-bottom: -8px !important;
+
+  height: 70px;
+  border-radius: 0;
+}
+
 .navbar-light {
   .navbar-nav {
     .nav-link {
@@ -38,6 +46,17 @@ body {
   color: #fff;
 
   &:hover {
+    background-color:#0d2f7e ;
+    color: #fff;
+  }
+}
+
+.btn-signup{
+  background-color: #071C4D;
+  color: #fff;
+
+  &:hover {
+    background-color:#0d2f7e ;
     color: #fff;
   }
 }
