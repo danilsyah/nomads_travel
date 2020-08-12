@@ -10,7 +10,7 @@ NOMADS ADMIN
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah Paket Travel</h1>
+        <h1 class="h3 mb-0 text-gray-800">Tambah Gallery</h1>
     </div>
 
     @if ($errors->any())
@@ -25,61 +25,22 @@ NOMADS ADMIN
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="{{ route('gallery.store') }}" method="POST">
+            <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" name="title" class="form-control" id="title" placeholder="Title"
-                        value="{{ old('title') }}">
+                    <label for="travel_packages_id">Paket Travel</label>
+                    <select name="travel_packages_id" required class="form-control" id="travel_packages_id">
+                        <option value="">-Pilih Paket Travel-</option>
+                        @foreach ($travel_packages as $travel_package)
+                        <option value="{{ $travel_package->id }}">{{ $travel_package->title }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" name="location" class="form-control" id="location" placeholder="Location"
-                        value="{{ old('location') }}">
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image" class="form-control" placeholder="Image">
                 </div>
-                <div class="form-group">
-                    <label for="about">About</label>
-                    <textarea name="about" id="about" rows="10"
-                        class="d-block w-100 form-control">{{ old('about') }}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="featured_event">Featured Event</label>
-                    <input type="text" name="featured_event" class="form-control" id="featured_event"
-                        placeholder="featured event" value="{{ old('featured_event') }}">
-                </div>
-                <div class="form-group">
-                    <label for="language">Language</label>
-                    <input type="text" name="language" class="form-control" id="language" placeholder="language"
-                        value="{{ old('language') }}">
-                </div>
-                <div class="form-group">
-                    <label for="foods">Foods</label>
-                    <input type="text" name="foods" class="form-control" id="foods" placeholder="foods"
-                        value="{{ old('foods') }}">
-                </div>
-                <div class="form-group">
-                    <label for="departure_date">Departure Date</label>
-                    <input type="date" name="departure_date" class="form-control" id="departure date"
-                        placeholder="Departure Date" value="{{ old('departure_date') }}">
-                </div>
-                <div class="form-group">
-                    <label for="duration">Duration</label>
-                    <input type="text" name="duration" class="form-control" id="duration" placeholder="Duration"
-                        value="{{ old('duration') }}">
-                </div>
-                <div class="form-group">
-                    <label for="type">Type</label>
-                    <input type="text" name="type" class="form-control" id="type" placeholder="Type"
-                        value="{{ old('type') }}">
-                </div>
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input type="number" name="price" class="form-control" id="price" placeholder="Price"
-                        value="{{ old('price') }}">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">
-                  Simpan
-                </button>
+                <button type="submit" class="btn btn-primary btn-block">Simpan</button>
             </form>
         </div>
     </div>

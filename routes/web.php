@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/detail', 'DetailController@index')->name('detail');
+Route::get('/detail/{slug}', 'DetailController@index')->name('detail');
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 Route::get('/checkout/success', 'CheckoutController@success')->name('checkout-success');
 
@@ -23,6 +23,7 @@ Route::prefix('admin')
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::resource('travel-package', 'TravelPackageController');
         Route::resource('gallery', 'GalleryController');
+        Route::resource('transaction', 'TransactionController');
     });
 
 

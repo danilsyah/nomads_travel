@@ -18,6 +18,7 @@ class TravelPackage extends Model
         
     ];
 
+    // relasi ke tabel galleries
     public function galleries(){
         return $this->hasMany(Gallery::class, 'travel_packages_id', 'id');
     }
