@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    NOMADS ADMIN
+    NOMADS CMS
 @endsection
 
 @section('content')
